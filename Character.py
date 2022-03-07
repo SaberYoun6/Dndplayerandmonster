@@ -49,9 +49,6 @@ int, wid, cha]"""
         return dict(charater_Name,character_attribute)
 
 
-    
-"""
-
 
 
 

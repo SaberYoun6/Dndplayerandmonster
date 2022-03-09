@@ -1,5 +1,7 @@
 #!/usr/bin/env  ptyhon3
-
+'''
+This class is only used for NPC
+'''
 
 __author__ = "Saberina Young"
 __copyright__ = "OGL"
@@ -10,9 +12,9 @@ __email__ = "saberina.young.103@gmail.com"
 __status__ = "Aplha"
 
 ### depedencies ####
+ from Connections import  connection
 
-
-class Characters():
+class Characters(object):
     def setting_up_character():
         charater_Name = input("Please put your character name")
         character_attribute = []
@@ -46,7 +48,15 @@ int, wid, cha]"""
         character_attribute.append(intelligence)
         character_attribute.append(wisdom)
         character_attribute.append(charistma)
-        return dict(charater_Name,character_attribute)
+        try:
+            connect.mycursor(""" CREATE sCHEMA CHARACTER; """)
+            connect.mycursor(""" CREATE TABLE CHARACTERS (Id NOT NULL int, Name varchar(255) NOT NULL, HP int, AC int, Init int,
+        str int,dex int,con int, intell int, wid int, cha int); """)
+            
+        except mysql.Error :
+
+
+        
 
 
 

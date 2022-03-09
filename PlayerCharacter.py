@@ -50,7 +50,7 @@ class player__character__():
             num = 4 
         elif self.inHertiable_traits == "half-orc":
             num = 5
-        elif self.inHertiable_traits == "Half-dragron":
+        elif self.inHertiable_traits == "Dragoborne":
             num =7
         elif self.inHertiable_traits == "Teifling":
             num =8
@@ -72,8 +72,6 @@ class player__character__():
             num = 16
         elif self.inHertiable_traits == "Stout halfing":
             num = 17
-        elif self.inHertiable_traits == "DragonBorn":
-            num = 18
         elif self.inHertiable_traits == "fairy":
             num = 19
         elif self.inHertiable_traits == "Minotaur":

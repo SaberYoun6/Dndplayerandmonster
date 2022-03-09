@@ -1,5 +1,12 @@
 __authors__ = "Saberina Young"
+__copyright__ = "Player and MOnsters 2022, Squid Mythos Hammer Industries"
 __name__of_file__ = "Connections.py"
+__credits__ = ["Saberina Young"]
+__license__ = "GPL 3.0"
+__maintianer__ = "Saberina Young"
+__email__ = "Saberina.young.103@gmail.com"
+__stauts__ = "Aplha"
+
 #depencies 
 #import mysql.connector this is for windows machine
 import os

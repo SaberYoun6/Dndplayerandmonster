@@ -19,7 +19,12 @@ class Main(object):
         object = Character.Characters("Ventus",18,14,4,16,12,11,15,13,17)
         ventus_init = object.initivative()
         ventus_str= object.define_modifitifer("str")
-        print("Ventus initivative  %d + ventus strength modfiter %d  " %(ventus_init,ventus_str))
+        ventus_spell_dc = object.spell_class_dc("cha")
+        ventus_pro = object.proficent
+        ventus_cha = object.define_modifitifer("cha")
+        vetnus_decpt = object.character_skillS("cha")
+        print("Ventus initivative : %d \n Ventus strength modfiter : %d \n Ventus spell dc : %d \n" %(ventus_init,ventus_str,ventus_spell_dc))
+        print("Ventus proficent %d\n Ventus christma %d\n Ventus deception %d\n " %(ventus_pro,ventus_cha,vetnus_decpt))
 
 
 Main.main()

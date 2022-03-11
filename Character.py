@@ -4,7 +4,7 @@ This class is only used for NPC
 '''
 
 __author__ = "Saberina Young"
-__copyright__ = "OGL"
+__copyright__ = "Dnd stats"
 __credits__ = ["Saberina Young",]
 __license__ = "GPL 3.0"
 __maintianer__ = "Saberina Young"
@@ -12,25 +12,51 @@ __email__ = "saberina.young.103@gmail.com"
 __status__ = "Aplha"
 
 ### depedencies ####
- from Connections import  connection
 import mariadb
 import os
 import sys
+import numpy as np
 
 class Characters(object):
-    def __init__(self,charater_name,hitpoint,armour_class,initivative, strength,dexiterity,constitution,intelligence,wisdom, charistma):
+    def __init__(self,charater_name,hitpoint,armour_class, proficent,strength,dexiterity,constitution,intelligence,wisdom, charistma):
         self.character_name = charater_name
         self.hitpoint = hitpoint
         self.armour_class = armour_class
-        self.initivative = initivative 
+        self.proficent = proficent
         self.strength = strength
         self.dexiterity = dexiterity
         self.constitution = constitution
         self.intelligence = intelligence
         self.wisdom = wisdom
-        self.charistma = charistam
+        self.charistma = charistma
 
-    def setting_up_character(self):
+    def define_modifitifer(self,mods):
+        mod =0
+        if mods == "strength" or mods == "str" :
+            mod = np.floor(self.strength /2 -5)
+        elif mods == "dexiterity" or mods == "dex":
+            mod = np.floor(self.dexiterity /2 -5)
+        elif mods == "constitution" or mods == "con":
+            mod = np.floor(self.constitution /2 -5)
+        elif mods == "intelligence" or mods == "int":
+            mod = np.floor(self.intelligence /2 -5)
+        elif mods == "wisdom" or mods == "wis":
+            mod = np.floor(self.wisdom /2 -5)
+        elif mods == "charistma" or mods == "cha":
+            mod = np.floor(self.charistma /2 -5)
+        else:
+            mod =0
+        return mod 
+    def character_skillS(self,mods):
+       mod = self.define_modifitifer(mods)+ self.proficent
+       return mod
+    def spell_class_dc(self,mods):
+       spell_dc = 8 + self.define_modifitifer(mods) + self.proficent 
+       return spell_dc
+    def  initivative(self):
+       inits = (self.dexiterity/2) -5
+       return inits 
+'''    def setting_up_character(self):
         charater_Name = input("Please put your character name")
         for status in character_attributes:
             try: con = mariadb.connect(
@@ -63,10 +89,4 @@ class Characters(object):
         query = f"DELETE FROM CHARACTERS WHERE name = %s"
         cur.execute(query)
         con.commit()
-        con.close()
-        
-
-
-
-
-
+        con.close()'''

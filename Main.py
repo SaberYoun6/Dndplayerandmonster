@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-import Connections 
-
+import Character
 
 __author__ = "Saberina Young"
 __copyright__ = "Players and monsters 2022, Squid Mtyhos Hammer Industries"
@@ -17,8 +16,10 @@ class Main(object):
     #def initial_game_setup():
 
     def main():
-        object = Connections.connnection() 
-        object.connection_creation()
+        object = Character.Characters("Ventus",18,14,4,16,12,11,15,13,17)
+        ventus_init = object.initivative()
+        ventus_str= object.define_modifitifer("str")
+        print("Ventus initivative  %d + ventus strength modfiter %d  " %(ventus_init,ventus_str))
 
 
 Main.main()

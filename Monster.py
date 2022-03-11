@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 
 
-
-
+import Character
+import numpy as np
 
 Class Monster(object):
 
-    def __init__(self,type_of_mon,Health_Points,Armour_Class,Legendary_Actions, Initivitive, Size, strength,dex,cons,wis,intelligence,cha,skills):
+    def __init__(self,type_of_mon,Health_Points,Armour_Class,proficient,Legendary_Actions, Initivitive, Size, strength,dex,cons,wis,intelligence,cha,skills):
         self.type_of_mon = type_of_mon 
         self.Health_Points = Health_Points
         self.Armour_Class = Armour_Class
         self.Legendary_Actions = Legendary_Actions
         self.Initivitive = Initivitive 
         self.Size = Size
+        self.proficient=proficient
         self.strength =strength 
         self.dex = dex
         self.cons = cons
@@ -236,7 +237,32 @@ Class Monster(object):
         return mon_size
 
 
+    def adding_Monster(self):
+        return 0
 
-    def Create_MOnster(self):
+    def createing_your_own_monster(self):
+        return 0 
 
     def skills(self):
+        #Matrix = first is strength
+        if proficent == unskilled:
+            blank_skill=[[0,0,0][0,0,0][0,0,0][0,0,0,0,0][][]] 
+        return blank_skill
+
+    def damage(self,hit):
+        dealt_damage =self.Health_Points - hit
+        return dealt_damage
+
+
+    def dealing_damage(self,attack, ability):
+        if ( ability != yes):
+            print( "roll to hit" )
+        else:
+            ("check spell/ability for ability modifier")
+
+
+    def Healing(self,rest):
+        healing_hp = rest + self.Health_Points
+        return healing_hp 
+
+

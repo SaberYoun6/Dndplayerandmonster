@@ -55,7 +55,68 @@ class Characters(object):
        return spell_dc
     def  initivative(self):
        inits = (self.dexiterity/2) -5
-       return inits 
+       return inits
+   def character_is_not_proficent(self,mods):
+       mod = self.define_modifitifer(mods)
+       return mod
+
+   def althelic_proficent(self,mod,prof):
+       a=0
+       if mod == "strength" or mod == "str" or prof == True:
+          a = self.character_skillS(mod)
+       elif mod == "dexiterity" or mod == "dex" or prof == True:
+          a = self.character_skillS(mod)
+       elif mod == "constitution" or mod == "con" or prof = True:
+          a = self.character_skillS(mod)
+       else:
+          a = self.character_is_not_proficent(mod)
+       return a 
+   def arobitics_proficents(self,mod,prof):
+       a = 0
+       if mod == "strength" or mod == "str" or prof == True:
+           a = self.character_skillS(mod)
+       elif mod == "dexiterity" or mod == "dex" or prof == True:
+           a = self.character_skillS(mod)
+       elif mod == "constitution" or mod == "con" or prof == True:
+           a = self.character_skillS(mod)
+       else:
+           a = self.character_is_not_proficent(mod)
+       return a
+   def sleath_proficents(self,mod,prof):
+       s = 0
+       if mod == "dexiterity" or mod == "dex" or prof == True:
+           s = character_skillS(mod)
+       else:
+           s = character_is_not_proficent(mod)
+       return s
+   def sleight_of_hand_proficents(self,mod,prof): 
+       s =0 
+       if mod == "dexiterity" or mod == 'dex' or prof == True:
+           s = character_skillS(mod)
+       else:
+           s = character_is_not_proficent(mod)
+       return s
+
+   def skills(self,mod,modi,mods,arr[],col,row,prof,pro,prot,pros):
+       arr = np.array(12).shape(col,row)
+       if mod == "strength" or modi == "dexiterity" or mods == "constitution" or mod == "str" or modi == "dex" or mods == "con":
+           arr.fill(self.althelic_proficent(mod,prof))
+           arr.fill(self.arobitics_proficents(mod,pro))
+           arr.fill(self.sleath_proficents(mod,prot))
+           arr.fill(self.sleight_of_hand_proficents(mod,pros))
+           
+           arr.fill(self.althelic_proficent(modi,prof))
+           arr.fill(self.arobitics_proficents(modi,pro))
+           arr,fill(self.sleath_proficents(modi,prot))
+           arr.fill(self.sleight_of_hand_proficents(mod,pros))
+
+           arr.fill(self.althelic_proficent(mods,prof))
+           arr.fill(self.arobitics_proficents(mods,pro))
+           arr.fill(self.sleath_proficents(mods,prot))
+           arr.fill(self.sleight_of_hand_proficents(pros))
+       else:
+        return arr
+
 '''    def setting_up_character(self):
         charater_Name = input("Please put your character name")
         for status in character_attributes:

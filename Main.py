@@ -23,8 +23,22 @@ class Main(object):
         ventus_pro = object.proficent
         ventus_cha = object.define_modifitifer("cha")
         vetnus_decpt = object.character_skillS("cha")
-        print("Ventus initivative : %d \n Ventus strength modfiter : %d \n Ventus spell dc : %d \n" %(ventus_init,ventus_str,ventus_spell_dc))
-        print("Ventus proficent %d\n Ventus christma %d\n Ventus deception %d\n " %(ventus_pro,ventus_cha,vetnus_decpt))
+        alth_pro_str = object.althelic_proficent("str",True)
+        alth_pro_dex = object.althelic_proficent("dex",True)
+        alth_pro_con = object.althelic_proficent("con",True)
+        aor_pro_str = object.arobitics_proficents("str",False)
+        aor_pro_Dex = object.arobitics_proficents("dex",False)
+        aor_pro_con = object.arobitics_proficents("con",False)
+
+        ventus_skills = object.skills("str","dex","con",False,True,True,False)
+
+        print("Ventus initivative : %d \n Ventus strength modfiter : %d \n Ventus spell dc : %d" %(ventus_init,ventus_str,ventus_spell_dc))
+        print("Ventus proficent %d\n Ventus christma %d\n Ventus deception %d " %(ventus_pro,ventus_cha,vetnus_decpt))
+        print("if ventus was proficent in althelics for strenght %d\n althelic proficent in dex %d\n althelic proficent in con %d" % (alth_pro_str,alth_pro_dex,alth_pro_con))
+        print("if ventus is not proficent in aorbatics using strength  %d\n aorbatic using dex %d\n aorbatic con %d" %(aor_pro_str, aor_pro_Dex,aor_pro_con))
+        print("Alth  |  arobat | sleath | SoH  ")
+        for skill in ventus_skills:
+            print(skill)
 
 
 Main.main()

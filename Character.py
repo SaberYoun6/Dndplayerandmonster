@@ -264,6 +264,24 @@ class Characters(object):
        arr = [0,0,0,0]
        arr = [self.deception_skill(mod,pro),self.intimidation_skill(mod,prof),self.preformace_skill(mod,prot),self.persusion_skill(mod,pros)]
        return arr
+
+   def characters_damsge(self,damage_taken):
+       if self.total_hitpoints() < 0 : 
+       self.hitpoint = self.total_hitpoints() - damage_taken
+       return self.hitpoint
+   def character_healling(self,healing):
+       if  healing >= self.total_hitpoints():
+       self.hitpoint= self.total_hitpoints() + healing
+       return self.hitpoint
+
+   def temp_hp(self,temp_hitpoints):
+       self.hitpoint = self.total_hitpoints() + temp_hitpoints
+       return self.hitpoint
+
+   def total_hitpoints(self):
+       self.hitpoint
+
+
 '''    def setting_up_character(self):
         charater_Name = input("Please put your character name")
         for status in character_attributes:

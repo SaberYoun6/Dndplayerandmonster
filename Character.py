@@ -95,16 +95,175 @@ class Characters(object):
        else:
            s = self.character_is_not_proficent(mod)
        return s
+    def animal_handling_skills(self,mod,prof):
+       a = 0
+       if mod == "wisdom" or mod == "wis" and prof == True:
+           a = self.character_skillS(mod)
+       elif mod == "intelligence" or mod == "int" and prof == True:
+           a = self.character_skillS(mod)
+       else:
+           a = self.character_is_not_proficent(mod)
+       return a
+    def arcana_skills(self,mod,prof):
+       a = 0
+       if mod == "intelligence" or mod == "int" and prof ==True:
+           a = self.character_skillS(mod)
+       elif mod == "wisdom" or mod == "wis" and prof == True:
+           a = self.character_skillS(mod)
+       else:
+           a = self.character_is_not_proficent(mod)
+       return a
+    def history_skill(self,mod,prof):
+       h = 0
+       if mod == 'intelligence' or mod == 'int' and prof == True:
+           h = self.character_skillS(mod)
+       elif mod == 'wisdom' or mod == 'wis' and prof == True:
+           h = self.character_skillS(mod)
+       else:
+           h = self.character_is_not_proficent(mod)
+       return h 
+    def insight_skill(self,mod,prof):
+       i = 0 
+       if mod == 'wisdom' or mod == 'wis' and prof == True:
+           i = self.character_skillS(mod)
+       elif mod == "intelligence" or mod == "int" and prof == True:
+           i = self.character_skillS(mod)
+       else:
+           i = self.character_is_not_proficent(mod)
+       return i
+    def investigation_skill(self,mod,prof):
+       i = 0
+       if mod == "intelligence" or mod == "int" and prof == True: 
+           i = self.character_skillS(mod)
+       elif mod == "wisdom" or mod == "wis" and prof == True: 
+           i = self.character_skillS(mod)
+       else:
+           i = self.character_is_not_proficent(mod)
+       return i 
+    def medicine_skill(self,mod,prof):
+       m= 0
+       if mod == 'wisdom' or mod == 'wis' and prof == True:
+           m = self.character_skillS(mod)
+       elif mod == "intelligence" or mod == "int" and prof == True:
+           m = self.character_skillS(mod)
+       else:
+           m = self.character_is_not_proficent(mod)
+       return m
+    def nature_skill(self,mod,prof):
+       n = 0
+       if mod == "intelligence" or mod == "int" and prof == True: 
+           n = self.character_skillS(mod)
+       elif mod == "wisdom" or mod == "wis" and prof == True: 
+           n = self.character_skillS(mod)
+       else:
+           n = self.character_is_not_proficent(mod)
+       return n
+    def perception_skill(self, mod,prof):
+       p= 0
+       if mod == 'wisdom' or mod == 'wis' and prof == True:
+           p = self.character_skillS(mod)
+       elif mod == "intelligence" or mod == "int" and prof == True:
+           p = self.character_skillS(mod)
+       else:
+           p = self.character_is_not_proficent(mod)
+       return p
 
-    def skills(self,mod,modi,mods,prof,pro,prot,pros):
-       arr =[[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+    def religon_skill(self, mod , prof): 
+       r = 0
+       if mod == "intelligence" or mod == "int" and prof == True: 
+           r = self.character_skillS(mod)
+       elif mod == "wisdom" or mod == "wis" and prof == True: 
+           r = self.character_skillS(mod)
+       else:
+           r = self.character_is_not_proficent(mod)
+       return r
+
+    def survival_skill(self, mod ,prof):
+       s= 0
+       if mod == 'wisdom' or mod == 'wis' and prof == True:
+           s = self.character_skillS(mod)
+       elif mod == "intelligence" or mod == "int" and prof == True:
+           s = self.character_skillS(mod)
+       else:
+           s = self.character_is_not_proficent(mod)
+       return s
+    def deception_skill(self,mod,prof):
+       d = 0
+       if mod == 'charistma' or mod == 'cha' and prof == True:
+           d = self.character_skillS(mod)
+       elif mod == 'int' or mod == 'intelligence' and prof==True:
+           d = self.character_skillS(mod)
+       else:
+           d = self.character_is_not_proficent(mod)
+       return d 
+
+    def intimidation_skill(self,mod,prof):
+       i =0
+       if mod == "strength" or mod == "str" and prof == True:
+           i = self.character_skillS(mod)
+       elif mod == "cha" or mod == "charistma" and prof == True:
+           i = self.character_skillS(mod)
+       else:
+           i = self.character_is_not_proficent(mod)
+       return i
+    def preformace_skill(self,mod,prof):
+       p = 0
+       if mod == 'charistma' or mod =='cha' and prof == True:
+           p = self.character_skillS(mod)
+       else:
+           p = self.character_is_not_proficent(mod)
+       return p
+    def persusion_skill(self,mod,prof):
+       p =0 
+       if mod == 'charistma' or mod == 'cha' and prof == True:
+           p = self.character_skillS(mod)
+       else:
+           p = self.character_is_not_proficent(mod)
+       return p 
+    def str_dex_con_skills(self,mod,modi,mods,prof,pro,prot,pros,pr0s):
+       arr =[[0,0,0,0,0],[0,0,0,0],[0,0,0,0]]
        if mod == "strength" or modi == "dexiterity" or mods == "constitution" or mod == "str" or modi == "dex" or mods == "con":
-           arr[0]=[self.althelic_proficent(mod,prof),self.arobitics_proficents(mod,pro),self.sleath_proficents(mod,prot),self.sleight_of_hand_proficents(mod,pros)]
+           arr[0]=[self.althelic_proficent(mod,prof),self.arobitics_proficents(mod,pro),self.sleath_proficents(mod,prot),self.sleight_of_hand_proficents(mod,pros),self.intimidation_skill(mod,pr0s)]
            arr[1]=[self.althelic_proficent(modi,prof),self.arobitics_proficents(modi,pro),self.sleath_proficents(modi,prot),self.sleight_of_hand_proficents(modi,pros)]
            arr[2]=[self.althelic_proficent(mods,prof),self.arobitics_proficents(mods,pro),self.sleath_proficents(mods,prot),self.sleight_of_hand_proficents(mods,pros)]
-           
+       elif  mod == "dexiterity" or modi == "constitution" or mods =="strength" or mod == "dex" or modi == 'con' or mods == 'str':
+           arr[0]=[self.althelic_proficent(mods,prof),self.arobitics_proficents(mods,pro),self.sleath_proficents(mods,prot),self.sleight_of_hand_proficents(mods,pros),self.intimidation_skill(mods,pr0s)]
+           arr[1]=[self.althelic_proficent(mod,prof),self.arobitics_proficents(mod,pro),self.sleath_proficents(mod,prot),self.sleight_of_hand_proficents(mod,pros)]
+           arr[2]=[self.althelic_proficent(modi,prof),self.arobitics_proficents(modi,pro),self.sleath_proficents(modi,prot),self.sleight_of_hand_proficents(modi,pros)]
+       elif mod == "constitution" or modi == "strength" or mods == "dexiterity" or mod == 'con' or modi == 'str' or mods == 'dex':
+           arr[0]=[self.althelic_proficent(modi,prof),self.arobitics_proficents(modi,pro),self.sleath_proficents(modi,prot),self.sleight_of_hand_proficents(modi,pros),self.intimidation_skill(modi,pr0s)]
+           arr[1]=[self.althelic_proficent(mods,prof),self.arobitics_proficents(mods,pro),self.sleath_proficents(mods,prot),self.sleight_of_hand_proficents(mods,pros)]
+           arr[2]=[self.althelic_proficent(mod,prof),self.arobitics_proficents(mod,pro),self.sleath_proficents(mod,prot),self.sleight_of_hand_proficents(mod,pros)]
+       elif mod == "strength" or  modi =="constitution" or mods == "dexiterity" or mod =="str" or modi == "con" or mod == "dex":
+           arr[0]=[self.althelic_proficent(mod,prof),self.arobitics_proficents(mod,pro),self.sleath_proficents(mod,prot),self.sleight_of_hand_proficents(mod,pros),self.intimidation_skill(mod,pr0s)]
+           arr[1]=[self.althelic_proficent(mods,prof),self.arobitics_proficents(mods,pro),self.sleath_proficents(mods,prot),self.sleight_of_hand_proficents(mods,pros)]
+           arr[2]=[self.althelic_proficent(modi,prof),self.arobitics_proficents(modi,pro),self.sleath_proficents(modi,prot),self.sleight_of_hand_proficents(modi,pros)]
+       elif mod == 'dexiterity' or modi =="strength" or mods == "constitution" or mod == 'dex' or modi == 'str' or mods == 'con':
+           arr[0]=[self.althelic_proficent(modi,prof),self.arobitics_proficents(modi,pro),self.sleath_proficents(modi,prot),self.sleight_of_hand_proficents(modi,pros),self.intimidation_skill(modi,pr0s)]
+           arr[1]=[self.althelic_proficent(mod,prof),self.arobitics_proficents(mod,pro),self.sleath_proficents(mod,prot),self.sleight_of_hand_proficents(mod,pros)]
+           arr[2]=[self.althelic_proficent(mods,prof),self.arobitics_proficents(mods,pro),self.sleath_proficents(mods,prot),self.sleight_of_hand_proficents(mods,pros)]
+       elif mod == 'constitution' or modi == 'dexiterity' or mods =='strength' or mod == 'con' or modi == 'dex' or mods == 'str':
+           arr[0]=[self.althelic_proficent(mods,prof),self.arobitics_proficents(mods,pro),self.sleath_proficents(mods,prot),self.sleight_of_hand_proficents(mods,pros),self.intimidation_skill(mods,pros)]
+           arr[1]=[self.althelic_proficent(modi,prof),self.arobitics_proficents(modi,pro),self.sleath_proficents(modi,prot),self.sleight_of_hand_proficents(modi,pros)]
+           arr[2]=[self.althelic_proficent(mod,prof),self.arobitics_proficents(mod,pro),self.sleath_proficents(mod,prot),self.sleight_of_hand_proficents(mod,pros)]
+       else:
+           arr
        return arr
-
+    def int_wis_skills(self,mod,mods,pro,prof,prot,pros,profi,profit,prots,proficnt,pr0s,proficent,pr0fs):
+       arr=[[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0]]
+       if mod == "wisdom" or mods == "intelligence" or mod == "wis" or mods == "int":
+           arr[0] = [self.animal_handling_skills(mod,pro),self.arcana_skills(mod,prof),self.history_skill(mod,prot),self.insight_skill(mod,pros),self.investigation_skill(mod,profi),self.medicine_skill(mod,profit),self.nature_skill(mod,prots),self.perception_skill(mod,proficnt),self.religon_skill(mod,pr0s),self.survival_skill(mod,proficent)]
+           arr[1] = [self.animal_handling_skills(mods,pro),self.arcana_skills(mods,prof),self.history_skill(mods,prot),self.insight_skill(mods,pros),self.investigation_skill(mods,profi),self.medicine_skill(mods,profit),self.nature_skill(mods,prots),self.perception_skill(mods,proficnt),self.religon_skill(mods,pr0s),self.survival_skill(mods,proficent),self.deception_skill(mods,pr0fs)]
+       elif mod == "intelligence" or mods == "wisdom" or mod == "int" or mods == "wis":
+           arr[0] = [self.animal_handling_skills(mods,pro),self.arcana_skills(mods,prof),self.history_skill(mods,prot),self.insight_skill(mods,pros),self.investigation_skill(mods,profi),self.medicine_skill(mods,profit),self.nature_skill(mods,prots),self.perception_skill(mods,proficnt),self.religon_skill(mods,pr0s),self.survival_skill(mods,proficent)]
+           arr[1] = [self.animal_handling_skills(mod,pro),self.arcana_skills(mod,prof),self.history_skill(mod,prot),self.insight_skill(mod,pros),self.investigation_skill(mod,profi),self.medicine_skill(mod,profit),self.nature_skill(mod,prots),self.perception_skill(mod,proficnt),self.religon_skill(mod,pr0s),self.survival_skill(mod,proficent),self.deception_skill(mod,pr0fs)]
+       else:
+           arr
+       return arr
+    def cha_skills(self,mod,pro,prof,prot,pros):
+       arr = [0,0,0,0]
+       arr = [self.deception_skill(mod,pro),self.intimidation_skill(mod,prof),self.preformace_skill(mod,prot),self.persusion_skill(mod,pros)]
+       return arr
 '''    def setting_up_character(self):
         charater_Name = input("Please put your character name")
         for status in character_attributes:

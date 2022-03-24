@@ -7,6 +7,8 @@ class player__character__():
         self.inHertiable_traits = inHertiable_traits 
         self.sub_inHertiable_traits =sub_inHertiable_traits
         self.sub_character_class = sub_character_class
+        self.background_character = background_character
+
     def player_characters_setup():
 
     def player_character_class(self)

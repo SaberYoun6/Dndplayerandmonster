@@ -114,10 +114,20 @@ class player__character__():
             num = self.sub_traits_shifter()
         elif self.inHertiable_traits == "warforged":
             num = 33
-        elif self.inHertiable_traits == "":
+        elif self.inHertiable_traits == "dhampir":
             num = 34
+        elif self.inHertiable_traits == 'hexblood':
+            num = 35
+        elif self.inHertiable_traits == 'reborn':
+            num = 36
+        elif self.inHertiable_traits == 'Leonin':
+            num = 37
+        elif self.inHertiable_traits == 'Centaur':
+            num = 38
+        elif self.inHertiable_traits == 'harengon':
+            num = 39
         else:
-            num = race_not_mention():
+            num = race_not_mention(self.inHertiable_traits):
         return num 
     def sub_traits_elf(self):
         if self.sub_inHertiable_traits == "drow":
@@ -132,10 +142,10 @@ class player__character__():
             num = [1,5]
         elif self.sub_inHertiable_traits == "summer elf":
             num = [1,6]
-        elif self.sub_inHertiable_traits == "shari-dari":
+        elif self.sub_inHertiable_traits == "shadar-kai":
             num = [1,7]
         elif self.sub_inHertiable_traits == "winter elf":
             num = [1,8]
-        elif self.sub_inHertiable_traits == 'Eldrain':
+        elif self.sub_inHertiable_traits == 'sea elf':
             num = [1,9]
 

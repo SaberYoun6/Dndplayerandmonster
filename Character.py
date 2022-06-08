@@ -110,6 +110,8 @@ class Characters(object):
            a = self.character_skillS(mod)
        elif mod == "wisdom" or mod == "wis" and prof == True:
            a = self.character_skillS(mod)
+       elif mod == "charistma" or mod == "cha" and prof == True:
+           a = self.character_skillS(mod) 
        else:
            a = self.character_is_not_proficent(mod)
        return a
@@ -260,9 +262,9 @@ class Characters(object):
        else:
            arr
        return arr
-    def cha_skills(self,mod,pro,prof,prot,pros):
-       arr = [0,0,0,0]
-       arr = [self.deception_skill(mod,pro),self.intimidation_skill(mod,prof),self.preformace_skill(mod,prot),self.persusion_skill(mod,pros)]
+    def cha_skills(self,mod,pro,prof,prot,pros,acra):
+       arr = [0,0,0,0,0]
+       arr = [self.deception_skill(mod,pro),self.intimidation_skill(mod,prof),self.preformace_skill(mod,prot),self.persusion_skill(mod,pros),self.arcana_skills(mod,acra)]
        return arr
 
     def characters_damsge(self,damage_taken):

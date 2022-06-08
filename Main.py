@@ -32,16 +32,16 @@ class Main(object):
 
         str_dex_con_ventus_skills = object.str_dex_con_skills("str","dex","con",True,False,False,False,True)
 
-        int_wis_ventus_skills = object.int_wis_skills("wis","int",True,False,False,False,False,False,False,True,False,False,False)
+        int_wis_ventus_skills = object.int_wis_skills("wis","int",True,True,False,False,False,False,False,True,False,False,False)
 
-        cha_ventus_skills = object.cha_skills("cha",False,True,False,False)
+        cha_ventus_skills = object.cha_skills("cha",False,True,False,False,True)
 
 
         print("Ventus initivative : %d \n Ventus strength modfiter : %d \n Ventus spell dc : %d" %(ventus_init,ventus_str,ventus_spell_dc))
         print("Ventus proficent %d\n Ventus christma %d\n Ventus deception %d " %(ventus_pro,ventus_cha,vetnus_decpt))
         print("if ventus was proficent in althelics for strenght %d\n althelic proficent in dex %d\n althelic proficent in con %d" % (alth_pro_str,alth_pro_dex,alth_pro_con))
         print("if ventus is not proficent in aorbatics using strength  %d\n aorbatic using dex %d\n aorbatic con %d" %(aor_pro_str, aor_pro_Dex,aor_pro_con))
-        print("Alth  |  arobat | sleath | SoH  ")
+        print("Althetics  |  Arobatics | Sleath | Sleight of Hand  ")
         for skill in str_dex_con_ventus_skills:
             print(skill)
         for skill in int_wis_ventus_skills:

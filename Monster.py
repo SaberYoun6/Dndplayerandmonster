@@ -27,7 +27,7 @@ Class Monster(object):
         if self.type_of_mon.equals("oozes"):
             mon_type = 1
         elif self.type_of_mon.equals("dragon"):
-            mon_type  = subtype_of_Dragon()
+            mon_type  = self.subtype_of_Dragon()
         elif self.type_of_mon == "gaint":
             mon_type = subtype_of_gaints()
         elif self.type_of_mon == "humanoid":
@@ -59,9 +59,8 @@ Class Monster(object):
         else:
             mon_type = 17
         return mon_type
-    def subtype_of_Dragon():
+    def subtype_of_Dragon(self,subtype):
         mon_type = ()
-        if type_of_dragon = input("Black, Blue, Green, Red,White ,Brown, Gray, Purple, Pink, Salt, Yellow ,Brass, Bronze, Copper, Gold, Siliver,Cobalt, Iron,Platinum, Steel,Electrum, Turtles, Drakes, PSeudodragon, Natural, Amber ,Ruby, Sapphire, Amethyst, Crystal, Emerald, Topaz, Pearl, Obsidian, Shadow, Faeire, Astral, Ethereal, Rust, Radient, Mirage, Howling, Lung, ...")
         if type_of_dragon == "Black":
             mon_type = (2,1)
         elif type_of_dragon == "Blue":
@@ -102,13 +101,13 @@ Class Monster(object):
             mon_type = (2,19)
         elif type_of_dragon =="Steel":
             mon_type = (2,20)
-        elif type_of_dragon == "Tutrles":
+        elif type_of_dragon =="Tutrles":
             mon_type = (2,21)
-        elif type_of_dragon == "Drake":
+        elif type_of_dragon =="Drake":
             mon_type = (2,22)
-        elif type_of_dragon == "Psudeodragons":
+        elif type_of_dragon =="Psudeodragons":
             mon_type = (2,23)
-        elif type_of_dragon == "Natural":
+        elif type_of_dragon =="Natural":
             mon_type = (2,24)
         elif type_of_dragon =="Amber":
             mon_type = (2,25)
@@ -141,7 +140,7 @@ Class Monster(object):
         elif type_of_dragon =="Lung":
             mon_type = (2,39)
         else:
-            mon_type = (2,40)
+            mon_type = (2,unknown_dragon_type(self))
         return mon_type
     def subtype_of_gaints():
         mon_type = ()
